@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\mkraf\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\mkraf\\.nuget\\packages"
-    ]
-  }
-}

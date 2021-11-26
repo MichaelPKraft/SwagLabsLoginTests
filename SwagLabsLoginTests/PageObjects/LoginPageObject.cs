@@ -1,26 +1,19 @@
 ﻿using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SwagLabsLoginTests.PageObjects;
 
 namespace SwagLabsLoginTest.PageObjects
 {
     /// <summary>
     /// Swag Labs Login Page Object
     /// </summary>
-    public class LoginPageObject
+    public class LoginPageObject : BasePageObject
     {
-        //The URL of the Swag Labs login page
         private const string SwagLabsLoginUrl = "https://www.saucedemo.com/";
 
-        //The Selenium web driver to automate the browser
-        private readonly IWebDriver _webDriver;
-
-        //The default wait time in seconds for wait.Until
-        //public const int DefaultWaitInSeconds = 5;
-
-        public LoginPageObject(IWebDriver webDriver)
+        public LoginPageObject(IWebDriver webDriver) : base(webDriver)
         {
-            _webDriver = webDriver;
         }
 
         //Find elements

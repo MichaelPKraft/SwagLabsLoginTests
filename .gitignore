@@ -1,0 +1,6 @@
+# .gitignore file for SwagLabsLoginTests project
+
+
+/.vs
+/SwagLabsLoginTests/bin
+/SwagLabsLoginTests/obj

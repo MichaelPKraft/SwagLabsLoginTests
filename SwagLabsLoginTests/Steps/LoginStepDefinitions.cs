@@ -32,8 +32,7 @@ namespace SwagLabsLoginTests.Steps
         [When(@"I fill the account information for account StandardUser \(""(.*)"", ""(.*)""\) into the Username field and the Password field")]
         public void WhenIFillTheAccountInformationForAccountStandardUserIntoTheUsernameFieldAndThePasswordField(string username, string password)
         {
-            _loginPageObject.EnterUserName(username);
-            _loginPageObject.EnterPassword(password);
+            LoginUser(username, password);
         }
 
         [When(@"I click the Login Button")]
@@ -57,15 +56,19 @@ namespace SwagLabsLoginTests.Steps
         [When(@"I fill the account information for account LockedOutUser \(""(.*)"", ""(.*)""\) into the Username field and the Password field")]
         public void WhenIFillTheAccountInformationForAccountLockedOutUserIntoTheUsernameFieldAndThePasswordField(string username, string password)
         {
-            _loginPageObject.EnterUserName(username);
-            _loginPageObject.EnterPassword(password);
+            LoginUser(username, password);
         }
 
         [Then(@"I verify the Error Message contains the text ""(.*)""")]
         public void ThenIVerifyTheErrorMessageContainsTheText(string errorMessage)
         {
-            Assert.AreEqual(_loginPageObject.CheckForLoginError(), errorMessage);
+            Assert.AreEqual(errorMessage, _loginPageObject.CheckForLoginError());
         }
 
+        private void LoginUser(string username, string password)
+        {
+            _loginPageObject.EnterUserName(username);
+            _loginPageObject.EnterPassword(password);
+        }
     }
 }
