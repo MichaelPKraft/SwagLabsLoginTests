@@ -1,0 +1,30 @@
+---------- Starting test run ----------
+NUnit Adapter 4.1.0.0: Test execution started
+Running selected tests in C:\work\SwagLabsLoginTests\SwagLabsLoginTests\bin\Debug\netcoreapp3.1\SwagLabsLoginTests.dll
+   NUnit3TestExecutor discovered 2 of 2 NUnit test cases using Current Discovery mode, Non-Explicit run
+Given I am on the Sauce Demo Login Page
+-> done: LoginStepDefinitions.GivenIAmOnTheSauceDemoLoginPage() (4.2s)
+When I fill the account information for account StandardUser ("standard_user", "secret_sauce") into the Username field and the Password field
+-> done: LoginStepDefinitions.WhenIFillTheAccountInformationForAccountStandardUserIntoTheUsernameFieldAndThePasswordField("standard_user", "secret_sauce") (0.9s)
+And I click the Login Button
+-> done: LoginStepDefinitions.WhenIClickTheLoginButton() (0.3s)
+Then I am redirected to the Sauce Demo Main Page
+-> done: LoginStepDefinitions.ThenIAmRedirectedToTheSauceDemoMainPage() (0.0s)
+And I verify the App Logo exists
+-> done: LoginStepDefinitions.ThenIVerifyTheAppLogoExists() (0.1s)
+
+Given I am on the Sauce Demo Login Page
+-> done: LoginStepDefinitions.GivenIAmOnTheSauceDemoLoginPage() (3.1s)
+When I fill the account information for account LockedOutUser ("locked_out_user", "secret_sauce") into the Username field and the Password field
+-> done: LoginStepDefinitions.WhenIFillTheAccountInformationForAccountLockedOutUserIntoTheUsernameFieldAndThePasswordField("locked_out_user", "secret_sauce") (0.9s)
+And I click the Login Button
+-> done: LoginStepDefinitions.WhenIClickTheLoginButton() (0.2s)
+Then I verify the Error Message contains the text "Sorry, this user has been banned."
+-> error:   Expected string length 33 but was 51. Strings differ at index 0.
+  Expected: "Sorry, this user has been banned."
+  But was:  "Epic sadface: Sorry, this user has been locked out."
+  -----------^
+ (0.4s)
+
+NUnit Adapter 4.1.0.0: Test execution complete
+========== Test run finished: 2 Tests run in 14.7 sec (1 Passed, 1 Failed, 0 Skipped) ==========
