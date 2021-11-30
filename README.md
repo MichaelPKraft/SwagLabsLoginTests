@@ -32,4 +32,9 @@ Password: secret_sauce
 Username: locked_out_user  
 Password: secret_sauce  
 
+## Potential Improvements
+1. Add additional tests
+2. Improve error handling when elements are not located
+3. Add shared browser hooks to increase execution speed
+4. Implement logging
 
